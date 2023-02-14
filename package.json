@@ -1,31 +1,35 @@
 {
-  "name": "nodejstutorial",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": " nodemon --inspect index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PhuNguyen1601/nodejs_tutorial.git"
-  },
-  "keywords": [
-    "toturial",
-    "nodejs",
-    "phunguyen"
-  ],
-  "author": "fuka",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PhuNguyen1601/nodejs_tutorial/issues"
-  },
-  "homepage": "https://github.com/PhuNguyen1601/nodejs_tutorial#readme",
-  "dependencies": {
-    "express": "^4.18.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.20"
-  }
+    "name": "nodejstutorial",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.js",
+    "scripts": {
+        "start": " nodemon --inspect src/index.js",
+        "watch": "node-sass --watch src/resources/scss/ --output src/public/css/",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PhuNguyen1601/nodejs_tutorial.git"
+    },
+    "keywords": [
+        "toturial",
+        "nodejs",
+        "phunguyen"
+    ],
+    "author": "fuka",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/PhuNguyen1601/nodejs_tutorial/issues"
+    },
+    "homepage": "https://github.com/PhuNguyen1601/nodejs_tutorial#readme",
+    "dependencies": {
+        "express": "^4.18.2",
+        "express-handlebars": "^6.0.7"
+    },
+    "devDependencies": {
+        "morgan": "^1.10.0",
+        "node-sass": "^8.0.0",
+        "nodemon": "^2.0.20"
+    }
 }
