@@ -16,13 +16,23 @@
                 <option value="delete">Xóa</option>
             </select>
             <div class="btn btn-primary btn-sm disabled check-all-submit-btn">Thực hiện</div>
+            <div class="ml-auto">
+                <a href="/courses/create">
+                    <i class="fa-solid fa-plus"></i> Đăng khóa học
+                </a>
+            </div>
         </div>
     </div>
+    
 
     <table class='table mt-4'>
         <thead>
             <tr>
-                <th scope='col' class='text-center' colspan="2">#</th>
+                <th scope='col' class='text-center'></th>
+                <th scope='col' class='text-center'>
+                    ID
+                    {{{sortable '_id' _sort}}}
+                </th>
                 <th scope='col' class='text-center'>
                     Tên khóa học
                     {{{sortable 'name' _sort}}}
@@ -48,19 +58,19 @@
                             <input class="form-check-input" type="checkbox" name="courseIds[]" value="{{this._id}}">
                         </div>
                     </td>
-                    <td scope='row'>{{sum @index 1}}</td>
+                    <td scope='row'>{{this._id}}</td>
                     <td>{{this.name}}</td>
                     <td>{{this.level}}</td>
                     <td>{{this.createdAt}}</td>
                     <td>
-                        <a href='/courses/{{this._id}}/edit' class='btn btn-link'>Sửa</a>
-                        <a
+                        <a href='/courses/{{this._id}}/edit' class='btn btn-link'><i class="fa-solid fa-pen-to-square"></i> Sửa</a>
+                        {{!-- <a
                             href=''
                             class='btn btn-link'
                             data-id='{{this._id}}'
                             data-toggle='modal'
                             data-target='#delete-course-modal'
-                        >Xóa</a>
+                        >Xóa</a> --}}
                     </td>
                 </tr>
             {{else}}
